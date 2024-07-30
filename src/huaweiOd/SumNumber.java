@@ -3,7 +3,7 @@ package huaweiOd;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+//自然数之合
 public class SumNumber {
     public void printNumbers(int n) {
         int sum = 0;
@@ -38,9 +38,9 @@ public class SumNumber {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Integer num = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        Integer num = scanner.nextInt();
         SumNumber sumNumber = new SumNumber();
-        sumNumber.printNumbers(num);
+        sumNumber.printNumbers(107374182);
     }
 }
