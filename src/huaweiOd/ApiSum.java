@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.*;
-//api集群
+//api集群 good
 public class ApiSum {
     public void apiSum(int floor, Map<String, List<String>> map, String string) {
         int sum = 0;
@@ -22,12 +22,11 @@ public class ApiSum {
         List<String> lists = new ArrayList<>();
         for (int i = 1; i <= num; i++) {
             Scanner scanner1 = new Scanner(System.in);
-            String str = scanner1.nextLine();
+            String str = scanner1.next();
             lists.add(str);
         }
-        Scanner scanner1 = new Scanner(System.in);
-        int floor = scanner1.nextInt();
-        String str = scanner1.next();
+        int floor = scanner.nextInt();
+        String str = scanner.next();
         Map<String, List<String>> map = new HashMap<>();
         for (int i = 0; i < lists.size(); i++) {
             String str1 = lists.get(i);

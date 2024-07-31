@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.Scanner;
-//执行时长
+//执行时长 good
 public class ActionTime {
     public void actionTime(int doTask, int[] tasks) {
         int currentTasks = 0;
@@ -31,17 +31,16 @@ public class ActionTime {
     }
 
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        int nums = Integer.valueOf(scanner.nextLine());
-//        int num2 = Integer.valueOf(scanner.nextLine());
-//        String line = scanner.nextLine();
-//        String[] num3 = line.split(" ");
-//        int[] num4 = new int[num3.length];
-//        for(int i =0;i<num3.length;i++){
-//            num4[i] = Integer.valueOf(num3[i]);
-//        }
-        int[] num4={5,4,1,1,1,};
+        Scanner scanner = new Scanner(System.in);
+        int nums = Integer.valueOf(scanner.nextLine());
+        int num2 = Integer.valueOf(scanner.nextLine());
+        String line = scanner.nextLine();
+        String[] num3 = line.split(" ");
+        int[] num4 = new int[num3.length];
+        for(int i =0;i<num3.length;i++){
+            num4[i] = Integer.valueOf(num3[i]);
+        }
         ActionTime actionTime = new ActionTime();
-        actionTime.actionTime(4,num4);
+        actionTime.actionTime(nums,num4);
     }
 }
