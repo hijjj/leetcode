@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        int n = Integer.valueOf(in.nextLine());
+        int n = Integer.valueOf(in.next());
         init(n);
         System.out.println(count);
 

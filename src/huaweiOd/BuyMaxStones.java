@@ -3,6 +3,7 @@ package huaweiOd;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 //最多购买珠宝数目
 public class BuyMaxStones {
@@ -30,12 +31,23 @@ public class BuyMaxStones {
             count=0;
         }
         Collections.sort(list);
-        System.out.println(list.get(list.size() - 1));
-    }
+        if(list!=null&&list.size()>0){
+            System.out.println(list.get(list.size() - 1));
+        }else{
+            System.out.println("0");
+        }
 
-    public static void main(String[] args) {
-        BuyMaxStones buyMaxStones = new BuyMaxStones();
-        int[] nums = {8,4,6,3,1,6,7};
-        buyMaxStones.buyMaxStones(10, nums);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int[] nums = new int[num];
+        for(int i =0;i<num;i++){
+            int price = sc.nextInt();
+            nums[i]=price;
+        }
+        int allMoneny = sc.nextInt();
+        BuyMaxStones main=new BuyMaxStones();
+        main.buyMaxStones(allMoneny,nums);
     }
 }

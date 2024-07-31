@@ -1,79 +1,40 @@
 package huaweiOd;
 
 import java.util.*;
-//开源项目
+
+//开源项目 good
 public class OpenProject {
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        int num = scanner.nextInt();
-//        Scanner scanner1 = new Scanner(System.in);
-//
-//        String weights = scanner1.nextLine();
-//        List<String> projectLists = new ArrayList<>();
-//        for (int i = 1; i <= num; i++) {
-//            Scanner scanner3 = new Scanner(System.in);
-//            projectLists.add(scanner3.nextLine());
-//        }
-//
-//        String[] weightss = weights.split(" ");
-//        int[] weight = new int[weights.length()];
-//        for (int i = 0; i < weightss.length; i++) {
-//            weight[i] = Integer.valueOf(weightss[i]);
-//        }
-//        Map<String,List<Integer>> webScore = new HashMap<>();
-//        for (String str : projectLists) {
-//             String[] strings= str.split(" ");
-//             String key = strings[0];
-//             List<Integer> lists = new ArrayList<>();
-//             for(int i =1;i<strings.length;i++){
-//                 lists.add(Integer.valueOf(strings[i]));
-//             }
-//            webScore.put(key,lists);
-//        }
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        int[] weight = new int[5];
+        for (int i = 0; i < 5; i++) {
+            weight[i] = scanner.nextInt();
+        }
+        List<String> projectLists = new ArrayList<>();
+
+        for (int i = 1; i <= num; i++) {
+            String name = scanner.next();
+            String num1 = " " + String.valueOf(scanner.nextInt());
+            String num2 = " " + String.valueOf(scanner.nextInt());
+            String num3 = " " + String.valueOf(scanner.nextInt());
+            String num4 = " " + String.valueOf(scanner.nextInt());
+            String num5 = " " + String.valueOf(scanner.nextInt());
+            projectLists.add(name + num1 + num2 + num3 + num4 + num5);
+        }
+
+        Map<String, List<Integer>> webScore = new HashMap<>();
+        for (String str : projectLists) {
+            String[] strings = str.split(" ");
+            String key = strings[0];
+            List<Integer> lists = new ArrayList<>();
+            for (int i = 1; i < strings.length; i++) {
+                lists.add(Integer.valueOf(strings[i]));
+            }
+            webScore.put(key, lists);
+        }
         OpenProject openProject = new OpenProject();
-        int[] weight = {5,6,6,1,2};
-        Map<String,List<Integer>> maps = new HashMap<>();
-        List<Integer> lists1 = new ArrayList<>();
-        lists1.add(13);
-        lists1.add(88);
-        lists1.add(46);
-        lists1.add(26);
-        lists1.add(169);
-
-        maps.put("camila",lists1);
-
-        List<Integer> lists2 = new ArrayList<>();
-        lists2.add(64);
-        lists2.add(38);
-        lists2.add(87);
-        lists2.add(23);
-        lists2.add(103);
-        maps.put("grace",lists2);
-
-        List<Integer> lists3 = new ArrayList<>();
-        lists3.add(91);
-        lists3.add(79);
-        lists3.add(98);
-        lists3.add(154);
-        lists3.add(79);
-        maps.put("lucas",lists3);
-
-        List<Integer> lists4 = new ArrayList<>();
-        lists4.add(29);
-        lists4.add(27);
-        lists4.add(36);
-        lists4.add(43);
-        lists4.add(178);
-        maps.put("leo",lists4);
-        List<Integer> lists5 = new ArrayList<>();
-        lists5.add(29);
-        lists5.add(27);
-        lists5.add(36);
-        lists5.add(43);
-        lists5.add(178);
-        maps.put("leop",lists5);
-        openProject.sortProjects(weight,maps);
-        Object o = new Object();
+        openProject.sortProjects(weight, webScore);
     }
 
     public void sortProjects(int[] weight, Map<String, List<Integer>> webScore) {
@@ -88,8 +49,8 @@ public class OpenProject {
                 for (Integer score : o2.values()) {
                     score2 = score;
                 }
-                if (score2.compareTo(score1)!=0) {
-                    return score2-score1;
+                if (score2.compareTo(score1) != 0) {
+                    return score2 - score1;
                 }
                 String key1 = null;
                 for (String key : o1.keySet()) {

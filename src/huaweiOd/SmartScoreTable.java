@@ -2,7 +2,7 @@ package huaweiOd;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
+//智能成绩 good
 public class SmartScoreTable {
     public void smartScoreTable(List<String> lists) {
         Comparator<String> comparator = new Comparator<String>() {
@@ -33,7 +33,9 @@ public class SmartScoreTable {
         Collections.sort(lists, comparator);
 
         if (!lists.isEmpty()) {
-            System.out.println(lists.get(lists.size() - 1));
+            for(String str:lists){
+                System.out.print(str.split("-")[0]+" ");
+            }
         }
     }
 
@@ -47,8 +49,7 @@ public class SmartScoreTable {
         List<String> projectLists = Arrays.asList(line1s);
         Map<String, List<Integer>> maps = new HashMap<>();
         for (int i = 0; i < studentsNums; i++) {
-            Scanner scanner1 = new Scanner(System.in);
-            String line2 = scanner1.nextLine();
+            String line2 = scanner.nextLine();
             String[] line2s = line2.split(" ");
             List<Integer> lists = new ArrayList<>();
             for (int j = 1; j < line2s.length; j++) {
@@ -59,7 +60,7 @@ public class SmartScoreTable {
         String xueke = scanner.nextLine();
         SmartScoreTable smartScoreTable = new SmartScoreTable();
         List<String> lists2 = new ArrayList<>();
-        if (xueke == null) {
+        if (!projectLists.contains(xueke)) {
             for (String key : maps.keySet()) {
                 List<Integer> lists = maps.get(key);
                 int count = lists.stream().mapToInt(u -> u).sum();
@@ -69,12 +70,15 @@ public class SmartScoreTable {
         } else {
             int i = 0;
             for (String str : projectLists) {
-                if (!xueke.equals(str)) {
-                     i++;
+                if (xueke.equals(str)) {
+                     break;
                 }
             }
             for(String key:maps.keySet()){
                 List<Integer> lists = maps.get(key);
+                if(i>=lists.size()){
+                    continue;
+                }
                 String str = key + "-" + lists.get(i);
                 lists2.add(str);
             }

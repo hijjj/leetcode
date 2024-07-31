@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.*;
-//找到最富有的家庭
+//找到最富有的家庭 good
 public class FindRiceLittleFamily {
     public void findRiceLittleFamily(Map<Integer, List<Integer>> familys, int[] moneys) {
         List<Integer> allMoney= new ArrayList<>();
@@ -24,6 +24,10 @@ public class FindRiceLittleFamily {
         Scanner scanner = new Scanner(System.in);
         String nums = scanner.nextLine();
         String line = scanner.nextLine();
+        if("1".equals(nums)){
+            System.out.println(line);
+            return;
+        }
         String[] lines = line.split(" ");
         int[] moneys = new int[lines.length];
         for (int i = 0; i < lines.length; i++) {
@@ -33,8 +37,7 @@ public class FindRiceLittleFamily {
         boolean result = true;
         int nums1 = 1;
         while (result) {
-            Scanner scanner1 = new Scanner(System.in);
-            String line1 = scanner1.nextLine();
+            String line1 = scanner.nextLine();
             String[] line1s = line1.split(" ");
             List<Integer> lists = new ArrayList<>();
             for (int i = 1; i < line1s.length; i++) {
