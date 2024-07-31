@@ -1,11 +1,9 @@
 package huaweiOd;
 
-import org.omg.CORBA.INV_FLAG;
-
 import java.util.*;
 //虚拟游戏
 public class VirtualGame {
-    public void virtualGame(int allMoneny, int recieveTask, int[] rebacks, int[] tasks, int[] monenys) {
+    public void virtualGame(int allMoneny, int recieveTask, Integer[] rebacks, Integer[] tasks, Integer[] monenys) {
         String result = "";
         Comparator<Map<String, Integer>> comparator = new Comparator<Map<String, Integer>>() {
             @Override
@@ -112,30 +110,26 @@ public class VirtualGame {
     }
 
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        String line1 = scanner.nextLine();
-//        String line2 = scanner.nextLine();
-//        String line3 = scanner.nextLine();
-//        String line4 = scanner.nextLine();
-        VirtualGame virtualGame = new VirtualGame();
-//        int allMoney = Integer.valueOf(line1.split(" ")[1]);
-//        int allTasks =Integer.valueOf(line1.split(" ")[2]);
-//        String[] strRebacks = line2.split(" ");
-        int[] renacks = {10, 20, 30, 40, 50};
-//        for(int i =0;i<strRebacks.length;i++){
-//            renacks[i]= Integer.valueOf(strRebacks[i]);
-//        }
-//        String[] strTask = line3.split(" ");
-        int[] tasks = {3, 4, 5, 6, 10};
-//        for(int i =0;i<strTask.length;i++){
-//            tasks[i]= Integer.valueOf(strTask[i]);
-//        }
+        Scanner scanner = new Scanner(System.in);
+        int  num1= scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        List<Integer> renacks = new ArrayList<>();
+        List<Integer> tasks = new ArrayList<>();
+        List<Integer> monenys = new ArrayList<>();
 
-//        String[] strMonenys = line4.split(" ");
-        int[] monenys = {20, 30, 20, 40, 30};
-//        for(int i =0;i<strMonenys.length;i++){
-//            monenys[i]= Integer.valueOf(strMonenys[i]);
-//        }
-        virtualGame.virtualGame(100, 10, renacks, tasks, monenys);
+        for(int i = 0;i<num1;i++){
+         renacks.add(scanner.nextInt());
+        }
+
+        for(int i = 0;i<num1;i++){
+            tasks.add(scanner.nextInt());
+        }
+        for(int i = 0;i<num1;i++){
+            monenys.add(scanner.nextInt());
+        }
+        VirtualGame virtualGame = new VirtualGame();
+
+        virtualGame.virtualGame(num2, num3, renacks.toArray(new Integer[0]), tasks.toArray(new Integer[0]), monenys.toArray(new Integer[0]));
     }
 }
