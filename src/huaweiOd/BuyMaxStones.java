@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-//最多购买珠宝数目
+//最多购买珠宝数目 good
 public class BuyMaxStones {
     public void buyMaxStones(int allMoneny, int[] monenys) {
         int res = 0;

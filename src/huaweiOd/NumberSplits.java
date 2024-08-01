@@ -1,15 +1,13 @@
 package huaweiOd;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-//智能成绩单
+import java.util.Scanner;
+
+//数的分解 good
 public class NumberSplits {
-    public void numberSplits(int num) {
+    public void numberSplits(long num) {
         int first = 0;
         for (int i = 2; i <= num; i++) {
-            int num2 = num - ((i - 1) * i / 2);
+            int num2 = (int) (num - ((i - 1) * i / 2));
             if(num2<0){
                 break;
             }
@@ -36,7 +34,9 @@ public class NumberSplits {
     }
 
     public static void main(String[] args) {
+        Scanner scanner  = new Scanner(System.in);
+        long num = scanner.nextLong();
         NumberSplits numberSplits = new NumberSplits();
-        numberSplits.numberSplits(107374182);
+        numberSplits.numberSplits(num);
     }
 }

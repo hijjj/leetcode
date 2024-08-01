@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.*;
-//围棋的气
+//围棋的气 good
 public class WeiQiliberty {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

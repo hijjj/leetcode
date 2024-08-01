@@ -1,10 +1,8 @@
 package huaweiOd;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-//飞机场飞机按序飞行
+import java.util.*;
+
+//飞机场飞机按序飞行 good
 public class PlaneFlyByOrder {
     public void planeFlyByOrder(List<String> lists) {
         Comparator<String> comparator = new Comparator<String>() {
@@ -36,8 +34,9 @@ public class PlaneFlyByOrder {
     }
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] strings = scanner.nextLine().split(",");
         PlaneFlyByOrder planeFlyByOrder =new PlaneFlyByOrder();
-        String[] strings = {"MU1087","CA9908","3U0045","FM1703"};
 
         planeFlyByOrder.planeFlyByOrder(Arrays.asList(strings));
     }

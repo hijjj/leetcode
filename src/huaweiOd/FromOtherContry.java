@@ -2,10 +2,11 @@ package huaweiOd;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
-//来自异国的客人
+//来自异国的客人 good
 public class FromOtherContry {
-    public void fromOtherContry(int allMoney, String luckyNum, int numberSystem) {
+    public void fromOtherContry(long allMoney, String luckyNum, int numberSystem) {
         String dataStr = convertDateToDigital(numberSystem, allMoney);
         String[] strings = String.valueOf(dataStr).split("");
         List<String> lists = Arrays.asList(strings);
@@ -18,11 +19,11 @@ public class FromOtherContry {
         System.out.println(sum);
     }
 
-    public String convertDateToDigital(int numberSystem, int allMoney) {
+    public String convertDateToDigital(long numberSystem, long allMoney) {
         String result =numberSystem!=16?"":"0x";
-        int number = 0;
-        int next = 1;
-        int currentNumber =allMoney;
+        long number = 0;
+        long next = 1;
+        long currentNumber =allMoney;
         while (next != 0) {
             number = currentNumber % numberSystem;
             next = currentNumber / numberSystem;
@@ -39,6 +40,10 @@ public class FromOtherContry {
 
     public static void main(String[] args) {
         FromOtherContry fromOtherContry = new FromOtherContry();
-        fromOtherContry.fromOtherContry(15, "1", 16);
+        Scanner scanner = new Scanner(System.in);
+        long allmoney = scanner.nextLong();
+        int luckyNum= scanner.nextInt();
+        int numberSystem=scanner.nextInt();
+        fromOtherContry.fromOtherContry(allmoney, String.valueOf(luckyNum), numberSystem);
     }
 }
