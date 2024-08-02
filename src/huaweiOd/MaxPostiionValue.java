@@ -2,7 +2,7 @@ package huaweiOd;
 
 import java.util.*;
 
-//最大坐标值
+//最大坐标值 good
 public class MaxPostiionValue {
     public void maxPostionValue(int luckyNum, int[] commonds) {
         if(luckyNum==0){
