@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
-//剩余银饰的重量
+//剩余银饰的重量 good
 public class LastGolden {
     public void lastGolden(List<Integer> nums) {
         PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
@@ -25,7 +25,7 @@ public class LastGolden {
         if(queue.isEmpty()){
             System.out.println(0);
         }else {
-//            System.out.println(queue.size()!=1?queue.poll():Math.abs(queue.poll()));
+//            System.out.print(queue.size()!=1?queue.poll():Math.abs(queue.poll()));
         }
     }
 
