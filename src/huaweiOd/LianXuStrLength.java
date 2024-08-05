@@ -4,7 +4,7 @@ import java.util.*;
 //连续字母长度 good
 public class LianXuStrLength {
     public static void lianXuStrLength(String s, int k) {
-        if(k==0){
+        if(k<=0){
             System.out.println(-1);
             return;
         }
