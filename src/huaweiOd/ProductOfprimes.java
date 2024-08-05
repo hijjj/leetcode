@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.Scanner;
-//素数乘机
+//素数乘机 good
 public class ProductOfprimes {
     public void productOfprimes(int num) {
         for (long i = 1; i * i <= num; i++) {
@@ -39,9 +39,9 @@ public class ProductOfprimes {
     }
 
     public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//        int n = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
         ProductOfprimes productOfprimes = new ProductOfprimes();
-        productOfprimes.productOfprimes(2147483647);
+        productOfprimes.productOfprimes(n);
     }
 }

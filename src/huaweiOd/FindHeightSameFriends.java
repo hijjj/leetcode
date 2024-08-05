@@ -49,11 +49,11 @@ public class FindHeightSameFriends {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Integer height = scanner.nextInt();
-        Integer num = scanner.nextInt();
-        Scanner scanner2 = new Scanner(System.in);
+        String str = scanner.nextLine();
+        Integer height = Integer.valueOf(str.split(" ")[0]);
+        Integer num = Integer.valueOf(str.split(" ")[1]);
 
-        String heightTts = scanner2.nextLine();
+        String heightTts = scanner.nextLine();
         int[] nums = new int[num];
         String[] heights = heightTts.split(" ");
         for (int i = 0; i < num; i++) {

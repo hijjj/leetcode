@@ -1,4 +1,7 @@
 package huaweiOd;
+
+import java.util.Scanner;
+
 //停车场位置
 public class StopCarFacotorySum {
     public void stopCarFactorySum(String string) {
@@ -20,6 +23,7 @@ public class StopCarFacotorySum {
 
     public static void main(String[] args) {
         StopCarFacotorySum sum1= new StopCarFacotorySum();
-        sum1.stopCarFactorySum("1100111101");
+        Scanner scanner = new Scanner(System.in);
+        sum1.stopCarFactorySum(scanner.nextLine());
     }
 }
