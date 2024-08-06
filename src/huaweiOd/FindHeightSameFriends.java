@@ -1,7 +1,7 @@
 package huaweiOd;
 
 import java.util.*;
-//小朋友的身高
+//小朋友的身高 good
 public class FindHeightSameFriends {
     public void findHeightSameFriends(int height, int nums, int[] friendsHeight) {
         Comparator<Map<Integer, Integer>> comparator = new Comparator<Map<Integer, Integer>>() {
