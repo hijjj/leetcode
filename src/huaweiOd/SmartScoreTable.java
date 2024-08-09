@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.StringJoiner;
-//智能成绩表 good
+//智能成绩表 全部都是抄的需要修改
 public class SmartScoreTable {
     static class Student {
         String name; // 学生姓名
