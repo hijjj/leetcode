@@ -2,9 +2,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 //音乐小说内容重新识别
-public class yingyuexiaoshuneirongchongxinshibie {
+public class yingyuejie {
     // ufs可以判断任意两个字符串是否相似
-    static UnionFindSet ufs = new UnionFindSet();
+    static UnionFindSet2 ufs = new UnionFindSet2();
 
     // 记录字符串和其对应的正则串
     static HashMap<String, String> map = new HashMap<>();
@@ -124,7 +124,7 @@ public class yingyuexiaoshuneirongchongxinshibie {
 }
 
 // 字符串并查集实现
-class UnionFindSet {
+class UnionFindSet2 {
     HashMap<String, String> fa = new HashMap<>();
 
     public void init(String[] words) {
